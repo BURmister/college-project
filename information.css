@@ -663,7 +663,7 @@ footer {
 
 .modal__wrapper {
    max-width: 93%;
-   height: 30%;
+   height: 600px;
    margin-top: 1%;
 
    position: relative;
@@ -698,7 +698,7 @@ footer {
 }
 
 .modal__card {
-   width: 98%
+   width: 98%;
 }
 
 .modal__image {

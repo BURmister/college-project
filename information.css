@@ -62,22 +62,16 @@ a {
 }
 
 header {
+   padding: 0 5% 0 5%;
    height: 100px;
-   display: flex;
-   justify-content: center;
-
-   background-color: rgba(231, 232, 233, 1);
-}
-
-.nav__wrapper {
-   width: 90%;
-   height: 100%;
 
    display: flex;
    justify-content: space-between;
    align-items: center;
 
    user-select: none;
+
+   background-color: rgba(231, 232, 233, 1);
 }
 
 .nav__logo {
@@ -146,11 +140,11 @@ header {
 }
    
 .information {
-   height: 45em;
+   padding: 10% 2% 5% 2%;
 
    display: flex;
    justify-content: center;
-   align-items: flex-start;
+   align-items: center;
 
    background: radial-gradient(39.76% 39.76% at 100% 60.24%, rgba(20, 255, 0, 0.2) 0%, 
    rgba(0, 0, 0, 0) 100%), 
@@ -161,11 +155,10 @@ header {
 
 .information__wrapper {
    max-width: 928px;
-   height: 40em;
 
    display: flex;
    flex-direction: column;
-   justify-content: flex-end;
+   justify-content: flex-start;
 
    text-align: left;
 }
@@ -234,8 +227,8 @@ header {
 }
 
 .spotlight__wrapper {
+   padding: 0 2% 0 2%;
    max-width: 1184px;
-   height: 90%;
 
    display: flex;
    flex-direction: column;
@@ -244,20 +237,14 @@ header {
 }
 
 .spotlight__projects {
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   flex-wrap: wrap;
+   padding-top: 2%;
 
-   gap: 3%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 3%;
 }
 
 .spotlight__card {
-   margin-top: 3%;
-      
-   width: 30%;
-   height: 33%;
-
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
@@ -273,25 +260,16 @@ header {
    animation-iteration-count: 1;
 }  
 
-.spotlight__card > a {
-   width: 100%;
-   height: 90%;   
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.spotlight__card > a { 
+   padding: 2% 2% 0% 2%;
 }
 
 .spotlight__card > a > img {
-   width: 95%;
-   height: 90%;   
-   padding-top: 2%;
+   width: 100%;
 }
 
 .card__wrapper {
-   padding-bottom: 3%;
-
-   width: 93%;
+   padding: 0% 2% 3% 2%;
 
    display: flex;
    flex-direction: column;
@@ -349,16 +327,11 @@ header {
 
 .projects {
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
-   grid-template-areas: 'project', 'project';
+   grid-template-columns: repeat(2, 1fr);
 }
 
 .projects__item {
-   padding-left: 2%;
-   padding-right: 2%;
-
-   height: 512px;
+   padding: 40% 2% 2% 2%;
 
    display: flex;
    flex-direction: column;
@@ -542,41 +515,26 @@ img, button, p, h2, h3, h4, a, .spotlight__h, .spotlight__card-info,
 
 footer {
    margin: 0;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
    
    background-color: #E7E8E9;
 }
 
 .footer__wrapper {
    margin: 0;
-   padding: 64px 0 16px 0;
-   width: 1184px;
-
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
+   padding: 5% 5% 2% 5%;
 
    gap: 80px;
 }
 
 .footer__contacts {
-   width: 100%;
+   padding-bottom: 5%;
+
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
 
-.footer__contacts-info {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: start;
-   gap: 1em;
-
+.footer__contacts-info {   
    font-weight: 400;
    font-size: 20px;
    line-height: 32px;
@@ -588,14 +546,11 @@ footer {
 
 .footer__contacts-icons {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
-   grid-template-areas: 'icon', 'icon', 'icon', 'icon';
+   grid-template-columns: repeat(4, 1fr);
    grid-gap: 40px;
 }
 
 .footer__copyright {
-   width: 100%;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -652,6 +607,11 @@ footer {
 }
 
 .modal {
+   padding-top: 10%;
+   padding-right: calc(50% - 598.3px);
+   padding-bottom: 5%;
+   padding-left: calc(50% - 598.3px);
+   
    height: 100vh;
    background-color: rgba(15, 22, 30, 0.7);
 
@@ -662,30 +622,27 @@ footer {
 }
 
 .modal__wrapper {
-   max-width: 93%;
-   height: 600px;
-   margin-top: 1%;
+   padding: 1% 1% 1% 1%;
+   max-width: 1000px;
 
    position: relative;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
 
    background-color: #EBF1F1;
 
    border: 1px solid #E7E8E9;
    border-radius: 10px;
 
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
-
    box-shadow: 3px 8px 10px rgba(15, 22, 30, 0.11);
 }
 
 .modal__close {
-   width: 92%;
-
-   display: flex;
-   justify-content: flex-end;
+   position: absolute;
+   top: -10%;
+   left: 96%;
 }
 
 .close-icon > path {
@@ -693,12 +650,8 @@ footer {
    transition: all 0.2s ease-in-out;
 }
 
-.modal__close > a:hover > .close-icon > path {
+.modal__close:hover > .close-icon > path {
    fill: rgba(249, 249, 249, 1);
-}
-
-.modal__card {
-   width: 98%;
 }
 
 .modal__image {
@@ -707,37 +660,23 @@ footer {
    border-radius: 15px;
 }
 
-.modal__card {
-   max-width: 1300px;
-   height: 590px;
-
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items:center;
-}
-
-.modal__card-info {
-   width: 98%;
-
+.modal__info {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
    align-items: flex-start;
 }
 
-.modal__card-info > a {
+.modal__info > a {
    color:rgba(0, 0, 0, 0.7);
    transition: all 0.2s ease-in-out;
 }
 
-.modal__card-info > a:hover {
+.modal__info > a:hover {
    color:rgba(0, 0, 0, 1);
 }
 
-.modal__card-buttons {
-   width: 98%;
-
+.modal__buttons {
    display: flex;
    flex-direction: row;
    justify-content: flex-start;
@@ -746,9 +685,7 @@ footer {
    gap: 35px;
 }
 
-.modal__card-links {
-   width: 98%;
-
+.modal__links {
    display: flex;
    flex-direction: row;
    justify-content: flex-end;
@@ -761,7 +698,7 @@ footer {
    user-select: none;
 }
 
-.modal__card-buttons >  a:last-child {
+.modal__buttons >  a:last-child {
    width: 70px;
    height: 40px;
 
@@ -783,7 +720,7 @@ footer {
    transition: all 0.2s ease-in-out;
 } 
 
-.modal__card-buttons > a:first-child {
+.modal__buttons > a:first-child {
    width: 110px;
    height: 40px;
 
@@ -805,23 +742,48 @@ footer {
    transition: all 0.2s ease-in-out;
 }
 
-.modal__card-buttons > a:hover {
+.modal__buttons > a:hover {
    background: rgba(15, 22, 30, 0.9);
    color: rgba(249, 249, 249, 0.9);
 
    letter-spacing: 1px;
 }
 
-.modal__card-links > a:hover > img {
+.modal__links > a:hover > img {
    scale: 1.5;
    rotate: 180deg;
    transition: all 0.5s ease-in-out;
 }
 
-.modal__card-links > a:hover > svg {
+.modal__links > a:hover > svg {
    scale: 1.5;
    rotate: 360deg;
    transition: all 0.5s ease-in-out;
+}
+
+.footer__icons {
+   animation: ease-in-out;
+   animation-name: footer__icons;
+   animation-duration: 0.7s;
+   animation-iteration-count: 1;
+}
+
+@keyframes footer__icons {
+   0% {
+      transform: rotate(-20deg);
+   }
+
+   40% {
+      transform: rotate(-60deg);
+   }
+
+   80% {
+      transform: rotate(30deg);
+   }
+
+   100% {
+      transform: rotate(10deg);
+   }
 }
 
 
@@ -845,6 +807,12 @@ footer {
 
 }
 
+@media screen and (max-width: 1050px) {
+   .modal__wrapper {
+      max-width: 800px;
+   }
+}
+
 @media screen and (max-width: 850px) {
 
    .nav__wrapper {
@@ -853,7 +821,6 @@ footer {
 
    .information__wrapper {
       max-width: 448px;
-      padding-top: 64px;
    }
 
    .information__h {
@@ -866,11 +833,7 @@ footer {
 
    .spotlight__projects {
       max-width: 576px;
-   }
-
-   .projects__item {
-      height: 360px;
-   }
+   }  
    
    .projects__item-wrapper {
       padding-bottom: 10px;
@@ -1000,63 +963,22 @@ footer {
    }
 
    .modal__wrapper {
-      width: 1000px;
-      height: 500px;
-      margin-top: 1%;
-   
-      position: relative;
-   
-      background-color: #EBF1F1;
-   
-      border: 1px solid #E7E8E9;
-      border-radius: 10px;
-   
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-   
-      box-shadow: 3px 8px 10px rgba(15, 22, 30, 0.11);
-   }
-   
-   .modal__close {
-      width: 92%;
-   
-      display: flex;
-      justify-content: flex-end;
+      max-width: 600px;
    }
 
-   .close-icon {
-      width: 40px;
-   }
-   
-   .close-icon > path {
-      fill: rgba(249, 249, 249, 0.5);
-      transition: all 0.2s ease-in-out;
-   }
-   
-   .modal__close > a:hover > .close-icon > path {
-      fill: rgba(249, 249, 249, 1);
-   }
-   
-   .modal__card {
-      width: 98%
+   .modal__close {
+      left: 92%;
    }
    
    .modal__image {
       height: 320px;
-      max-width: 700px;
       object-fit: cover;
    }
-   
-   .modal__card {
-      max-width: 1300px;
-      height: 590px;
-   
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items:center;
+}
+
+@media screen and (max-width: 700px) {
+   .modal__wrapper {
+      max-width: 470px;
    }
 }
 
@@ -1087,7 +1009,8 @@ footer {
    }
 
    .spotlight {
-      padding-top: 50%;
+      padding-top: 20%;
+      padding-bottom: 20%;
    }
 
    .spotlight__h {
@@ -1098,8 +1021,8 @@ footer {
       max-width: 336px;
    }
 
-   .spotlight__card {
-      width: 48%;
+   .spotlight__projects {
+      grid-template-columns: repeat(2, 1fr);
    }
 
    .projects {
@@ -1179,20 +1102,30 @@ footer {
       align-items: center;
    }
 
-   .modal__wrapper {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-   }
-
-   .modal__card-buttons {
-      gap: 10px;
-   }
-
    .footer__contacts-info {
       flex-direction: column;
    }
 
+   .modal__wrapper {
+      max-width: 320px;
+   }
+
+   .modal__close {
+      left: 88%;
+   }
+
+   .modal__image {
+      height: 290px;
+   }
+
+   .modal__buttons {
+      gap: 10px;
+   }
+}
+
+@media screen and (max-width: 350px) {
+   .modal__wrapper {
+      max-width: 280px;
+   }
 }
 
